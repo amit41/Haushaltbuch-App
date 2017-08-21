@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <EditText
+        android:id="@+id/etCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Category Name"
+        android:gravity="right"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_rectangle"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <RadioGroup android:id="@+id/rdbGpExpensesIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:padding="10dp"
+        android:layout_below="@+id/etCategoryName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton android:id="@+id/rdbExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <RadioButton android:id="@+id/rdbIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Income"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"/>
+    </RadioGroup>
+
+    <TextView
+        android:text="Parent Category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvParentCategoryLabel"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/rdbGpExpensesIncome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:hint="Select Parent Category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:id="@+id/tvParentCategory"
+        android:background="@drawable/bottom_border"
+        android:layout_below="@+id/rdbGpExpensesIncome"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorPrimary"/>
+
+</RelativeLayout>

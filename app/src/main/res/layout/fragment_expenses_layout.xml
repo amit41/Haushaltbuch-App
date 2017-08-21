@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/expense_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
+        <EditText
+            android:id="@+id/etExpensesCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 €"
+            android:gravity="right"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:inputType="none"
+            android:background="@drawable/rounded_rectangle"
+            android:focusable="false"
+            android:textIsSelectable="true"
+            android:layout_margin="2dp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rdExpensesIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expense_cost">
+        <RadioGroup android:id="@+id/rdbGpExpensesIncome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:padding="10dp">
+            <RadioButton android:id="@+id/rdbExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expense"
+                android:textSize="18sp"
+                android:checked="true"
+                android:textColor="@color/colorPrimary"/>
+            <RadioButton android:id="@+id/rdbIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Income"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rdExpensesIncome">
+
+        <TextView
+            android:id="@+id/tvCategoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select category"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="..."
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_border"
+            android:gravity="right"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/category">
+        <TextView
+            android:id="@+id/tvTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Give title"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Eg: Weekend Shopping"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:background="@drawable/bottom_border"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title">
+        <TextView
+            android:id="@+id/tvDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="10.12.2016"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:background="@drawable/bottom_border"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date">
+        <TextView
+            android:id="@+id/tvPaymentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:background="@drawable/bottom_border"
+            android:textColor="@color/colorPrimary"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/save_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/btnSaveTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Transaction"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:background="@drawable/orange_button"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+</RelativeLayout>

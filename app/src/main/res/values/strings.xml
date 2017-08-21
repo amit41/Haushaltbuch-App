@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">HaushaltsbuchApp</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="payment">
+        <item>Cash</item>
+        <item>Credit card</item>
+        <item>Debit card</item>
+    </string-array>
+    <string-array name="category">
+        <item>Food</item>
+        <item>Study</item>
+        <item>Cloths</item>
+        <item>Insurance</item>
+        <item>Salary</item>
+        <item>Rent</item>
+        <item>Electronics</item>
+    </string-array>
+    <string name="title_activity_tab">TabActivity</string>
+</resources>
